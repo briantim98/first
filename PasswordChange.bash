@@ -45,9 +45,10 @@ do
 			 continue
 	fi
 
-	PWSPACE="`grep 'PW=' $change"
+	PWSPACE="`grep '^PW=' $change`"
 	ChangePW $change ABC123 "$PWSPACE" "PW='abc123'"
 	echo "Changing the password of the account ABC123" >> $LOGFILE
+	echo " "
 	done
 done
 
